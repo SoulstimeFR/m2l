@@ -110,10 +110,11 @@ class ReservationRepository
     public function delete(int $id): bool
     {
         $pdo = Database::getConnection();
-        $stmt = $pdo->prepare('DELETE FROM reservation');
+        $stmt = $pdo->prepare('DELETE FROM reservation WHERE id = :id');
 
         return $stmt->execute(['id' => $id]);
     }
+
 
     /**
      * @param string $dateReservation Date de réservation

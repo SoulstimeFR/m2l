@@ -10,5 +10,5 @@ $id = (int) $_GET['id'];
 
 $repository->delete($id);
 
-include 'header.php';
+include 'index.php';
 exit;
